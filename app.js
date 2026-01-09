@@ -1,3 +1,6 @@
+console.clear();
+console.log("NEW JS FILE LOADED");
+
 // ================= Question 1 =================
 let productName = "Laptop";
 let price = 999.99;
