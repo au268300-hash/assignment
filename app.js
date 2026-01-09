@@ -2,7 +2,6 @@
 let productName = "Laptop";
 let price = 999.99;
 let inStock = true;
-
 console.log(productName, price, inStock);
 
 // ================= Question 2 =================
@@ -16,20 +15,20 @@ let decNum = 15;
 decNum -= 2;
 
 console.log("Remainder:", remainder);
-console.log("Square of 12:", square);
-console.log("Increment result:", incNum);
-console.log("Decrement result:", decNum);
+console.log("Square:", square);
+console.log("Increment:", incNum);
+console.log("Decrement:", decNum);
 
 // ================= Question 3 =================
-let firstName = "alex";
-let lastName = "SMITH";
+let fName = "alex";
+let lName = "SMITH";
 
-let fullName = firstName + " " + lastName;
-let properCaseName =
+let fullName = fName + " " + lName;
+let properName =
   fullName.charAt(0).toUpperCase() + fullName.slice(1).toLowerCase();
 
-console.log("Full Name:", properCaseName);
-console.log("Length:", properCaseName.length);
+console.log("Full Name:", properName);
+console.log("Length:", properName.length);
 
 // ================= Question 4 =================
 let temperature = 25;
@@ -52,7 +51,6 @@ let colors = ["red", "green", "blue"];
 colors.push("yellow");
 colors.shift();
 colors.splice(1, 0, "purple");
-
 console.log(colors, colors.length);
 
 // ================= Question 7 =================
@@ -61,8 +59,8 @@ fruits.splice(2, 1);
 fruits.splice(2, 1, "dragonfruit");
 
 let middleThree = fruits.splice(1, 3);
-console.log(fruits);
-console.log(middleThree);
+console.log("Fruits:", fruits);
+console.log("Middle:", middleThree);
 
 // ================= Question 8 =================
 let sum = 0;
@@ -99,13 +97,13 @@ console.log(sentence.replace(/JavaScript/g, "JS"));
 console.log(sentence.replace("awesome", "AWESOME"));
 
 // ================= Question 12 =================
-let numberVal = 123.456789;
+let numVal = 123.456789;
 
-console.log(numberVal.toFixed(2));
-console.log(Math.round(numberVal));
-console.log(Math.floor(numberVal));
-console.log(Math.ceil(numberVal));
-console.log(numberVal.toFixed(4));
+console.log(numVal.toFixed(2));
+console.log(Math.round(numVal));
+console.log(Math.floor(numVal));
+console.log(Math.ceil(numVal));
+console.log(numVal.toFixed(4));
 
 // ================= Question 13 =================
 console.log(Math.floor(Math.random() * 100) + 1);
@@ -113,14 +111,15 @@ console.log(Math.random().toFixed(3));
 console.log(Math.floor(Math.random() * (75 - 50 + 1)) + 50);
 
 // ================= Question 14 =================
-console.log(Number("123"));
-console.log(parseFloat("45.67"));
-console.log(String(789));
-console.log(typeof Boolean("true"));
+let n1 = Number("123");
+let n2 = parseFloat("45.67");
+let s1 = String(789);
+let b1 = Boolean("true");
+
+console.log(n1, n2, s1, typeof b1);
 
 // ================= Question 15 =================
 let now = new Date();
-
 console.log(now.getFullYear(), now.getMonth(), now.getDate());
 console.log(now.getHours());
 console.log(now.toISOString().split("T")[0]);
@@ -164,7 +163,7 @@ function getDay(num) {
     case 4: return "Thursday";
     case 5: return "Friday";
     case 6: return "Saturday";
-    default: return "Invalid";
+    default: return "Invalid day";
   }
 }
 
@@ -186,7 +185,7 @@ while (factNum > 0) {
   factorial *= factNum;
   factNum--;
 }
-console.log(factorial);
+console.log("Factorial:", factorial);
 
 // ================= Question 20 =================
 let enteredPassword = "";
@@ -197,7 +196,11 @@ do {
   if (attempts === 3) enteredPassword = "secret123";
 } while (enteredPassword !== "secret123" && attempts < 5);
 
-console.log(enteredPassword === "secret123" ? "Access granted" : "Access denied");
+console.log(
+  enteredPassword === "secret123"
+    ? "Access granted!"
+    : "Access denied!"
+);
 
 // ================= Question 21 =================
 let numbers = [12, 45, 78, 23, 56, 89, 34];
@@ -212,15 +215,15 @@ for (let i = 0; i < numbers.length; i++) {
   if (numbers[i] > 50) greaterThan50.push(numbers[i]);
 }
 
-let reversedArray = [];
+let reversed = [];
 for (let i = numbers.length - 1; i >= 0; i--) {
-  reversedArray.push(numbers[i]);
+  reversed.push(numbers[i]);
 }
 
-console.log(maxVal);
-console.log(total / numbers.length);
-console.log(greaterThan50);
-console.log(reversedArray);
+console.log("Max:", maxVal);
+console.log("Average:", total / numbers.length);
+console.log(">50:", greaterThan50);
+console.log("Reversed:", reversed);
 
 // ================= Question 22 =================
 function handleClick() {
